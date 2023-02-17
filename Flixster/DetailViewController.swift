@@ -25,15 +25,18 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         let vA = String(movie.vote_average)
+        var vA2 = " vote average"
         let vC = String(movie.vote_count)
+        var vC2 = " vote count"
         let pop = String(movie.popularity)
+        var pop2 = " popularity"
         
         Nuke.loadImage(with: movie.backdrop_path, into: moviePoster)
         
         movieTitle.text = movie.original_title
-        voteAverage.text = vA
-        votes.text = vC
-        popularity.text = pop
+        voteAverage.text = vA + vA2
+        votes.text = vC + vC2
+        popularity.text = pop + pop2
         movieDescrp.text = movie.overview
         
         

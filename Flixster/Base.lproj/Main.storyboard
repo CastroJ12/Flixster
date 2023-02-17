@@ -103,25 +103,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CZj-ju-WIf">
-                                <rect key="frame" x="66" y="440" width="10.333333333333329" height="49.666666666666686"/>
+                                <rect key="frame" x="66" y="440" width="41.333333333333343" height="49.666666666666686"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc0-eW-LNS">
-                                        <rect key="frame" x="0.0" y="0.0" width="10.333333333333334" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc0-eW-LNS">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpx-BX-6S3">
-                                        <rect key="frame" x="0.0" y="28.333333333333314" width="10.333333333333334" height="21.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpx-BX-6S3">
+                                        <rect key="frame" x="0.0" y="28.333333333333314" width="41.333333333333336" height="21.333333333333329"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbp-Ie-0cn">
-                                <rect key="frame" x="316.66666666666669" y="454.66666666666669" width="10.333333333333314" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbp-Ie-0cn">
+                                <rect key="frame" x="316.66666666666669" y="454.66666666666669" width="41.333333333333314" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -162,7 +162,7 @@
                             <constraint firstItem="CZj-ju-WIf" firstAttribute="top" secondItem="mKe-ZC-2pk" secondAttribute="top" constant="440" id="aur-PX-p7j"/>
                             <constraint firstItem="Fgh-vL-rEZ" firstAttribute="top" secondItem="CZj-ju-WIf" secondAttribute="bottom" constant="37.999999999999829" id="d7D-sU-HkQ"/>
                             <constraint firstItem="CZj-ju-WIf" firstAttribute="top" secondItem="PM5-ym-UbE" secondAttribute="bottom" constant="21.329999999999998" id="gqZ-r5-pZk"/>
-                            <constraint firstItem="TNv-cW-7r8" firstAttribute="trailing" secondItem="Sbp-Ie-0cn" secondAttribute="trailing" constant="66" id="or2-G9-q5D"/>
+                            <constraint firstItem="TNv-cW-7r8" firstAttribute="trailing" secondItem="Sbp-Ie-0cn" secondAttribute="trailing" constant="35" id="or2-G9-q5D"/>
                             <constraint firstItem="PM5-ym-UbE" firstAttribute="top" secondItem="TNv-cW-7r8" secondAttribute="top" id="rjp-yL-ycX"/>
                             <constraint firstItem="Fgh-vL-rEZ" firstAttribute="leading" secondItem="TNv-cW-7r8" secondAttribute="leading" constant="16" id="tB7-Ob-aWv"/>
                             <constraint firstItem="Fgh-vL-rEZ" firstAttribute="top" secondItem="Sbp-Ie-0cn" secondAttribute="bottom" constant="52.670000000000002" id="xyi-WQ-KjA"/>
