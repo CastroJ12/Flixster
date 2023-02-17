@@ -6,9 +6,18 @@
 //
 
 import UIKit
+import Nuke
 
 class MovieCell: UITableViewCell {
 
+    
+    @IBOutlet weak var movieImageView: UIImageView!
+    
+    @IBOutlet weak var movieTitleLabel: UILabel!
+    
+    @IBOutlet weak var movieDescp: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +29,10 @@ class MovieCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configure(with movie: Movie){
+        movieTitleLabel.text = movie.original_title
+        movieDescp.text = movie.overview
+        Nuke.loadImage(with: movie.poster_path, into: movieImageView)
+    }
+    
 }
