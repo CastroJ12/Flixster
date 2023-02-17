@@ -6,17 +6,37 @@
 //
 
 import UIKit
+import Nuke
 
 class DetailViewController: UIViewController {
-
     
+    @IBOutlet weak var moviePoster: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
     
+    @IBOutlet weak var voteAverage: UILabel!
+    @IBOutlet weak var votes: UILabel!
+    @IBOutlet weak var popularity: UILabel!
+    @IBOutlet weak var movieDescrp: UILabel!
+    
+    var movie: Movie!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let vA = String(movie.vote_average)
+        let vC = String(movie.vote_count)
+        let pop = String(movie.popularity)
+        
+        Nuke.loadImage(with: movie.backdrop_path, into: moviePoster)
+        
+        movieTitle.text = movie.original_title
+        voteAverage.text = vA
+        votes.text = vC
+        popularity.text = pop
+        movieDescrp.text = movie.overview
+        
+        
     }
     
 
