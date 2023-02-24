@@ -19,19 +19,23 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var movieDescrp: UILabel!
     
     var movie: Movie!
+    var poster: Poster!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let vA = String(movie.vote_average)
-        var vA2 = " vote average"
+        let vA2 = " vote average"
         let vC = String(movie.vote_count)
-        var vC2 = " vote count"
+        let vC2 = " vote count"
         let pop = String(movie.popularity)
-        var pop2 = " popularity"
+        let pop2 = " popularity"
         
-        Nuke.loadImage(with: movie.backdrop_path, into: moviePoster)
+        let url = movieDomainUrl + movie.backdrop_path
+        let fileUrl = URL(string: url)
+        
+        Nuke.loadImage(with: fileUrl!, into: moviePoster)
         
         movieTitle.text = movie.original_title
         voteAverage.text = vA + vA2

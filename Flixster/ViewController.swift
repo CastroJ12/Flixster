@@ -35,7 +35,55 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        movies = Movie.mockMovies
+        // Create a URL for the request
+        // In this case, the custom search URL you created in in part 1
+        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=6a0b6cf101e5b18284c373c09ca4cbaa")!
+
+        // Use the URL to instantiate a request
+        let request = URLRequest(url: url)
+
+        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+
+            // Handle any errors
+            if let error = error {
+                print("❌ Network error: \(error.localizedDescription)")
+            }
+
+            // Make sure we have data
+            guard let data = data else {
+                print("❌ Data is nil")
+                return
+            }
+
+            do {
+                let jsonDictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+                print(jsonDictionary)
+                let decoder = JSONDecoder()
+
+                // Use the JSON decoder to try and map the data to our custom model.
+                // TrackResponse.self is a reference to the type itself, tells the decoder what to map to.
+                let response = try decoder.decode(MovieResponse.self, from: data)
+
+                // Access the array of tracks from the `results` property
+                let movies = response.results
+                DispatchQueue.main.async {
+
+                    // Set the view controller's tracks property as this is the one the table view references
+                    self?.movies = movies
+
+                    // Make the table view reload now that we have new data
+                    self?.tableView.reloadData()
+                }
+                print("✅ \(movies)")
+            } catch {
+                print("❌ Error parsing JSON: \(error.localizedDescription)")
+            }
+        }
+
+        // Initiate the network request
+        task.resume()
+        print("👋 Below the closure")
+        
         print(movies)
         // Do any additional setup after loading the view.
         

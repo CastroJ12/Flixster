@@ -32,7 +32,11 @@ class MovieCell: UITableViewCell {
     func configure(with movie: Movie){
         movieTitleLabel.text = movie.original_title
         movieDescp.text = movie.overview
-        Nuke.loadImage(with: movie.poster_path, into: movieImageView)
+        let url = movieDomainUrl + movie.poster_path
+        let fileUrl = URL(string: url)
+        
+        Nuke.loadImage(with: fileUrl!, into: movieImageView)
+       // Nuke.loadImage(with: movie.poster_path, into: movieImageView)
     }
     
 }
