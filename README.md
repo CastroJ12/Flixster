@@ -1,26 +1,23 @@
-# Project 2 - Flixster
+# Project 2 & 3 - Flixster
 
 Submitted by: Jose Castro
 
-Flixster is a movie browsing app that shows the user with 5 movies and there description
+**Name of your app** is an app that introduces networking ... [TODO] 
 
-Time spent: 6 hours spent in total
+Time spent: **X** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] Users are able to see a customized app icon and launch screen
-- [x] Your app should work for any screen size and orientation using AutoLayout constraints
-- [x] Mark here if you will demostrate auto layout implemention as horizontal rotation or different phone size or both, then erase this text
-- [x] Displays at least 5 different movies in a table view
-- [x] Can tap into detail view of movie with a full description, backdrop image, and title
+- [x] Implement network call and table view to display a list of movies currently playing (title, description, image)
+- [x] App has a collection view with the same list of movies
+- [x] Uses a tab bar controller to switch between collection view and table view screens
  
 The following **optional** features are implemented:
 
-- [x] Unique UI changes, such as background, font/color changes, etc.
-- [ ] User implements a collection view
-- [ ] User implemenets tab bar controller with at least two screens
+- [x] Make an additional network call to another end-point.	
+- [x] Allow users to scroll when context items are off-screen (table view implemention)
 
 The following **additional** features are implemented:
 
@@ -28,12 +25,11 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+this is a gif of the recording PLEASE WATCH RECORDING FOR FULL FEATURES TO BE SHOWN
 
-<a href="https://www.loom.com/share/56586607cc4444659ee86fcc16271c1a">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/56586607cc4444659ee86fcc16271c1a-with-play.gif">
+<a href="https://www.loom.com/share/a482a958a6e24180b0d5a6f40f25278f">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a482a958a6e24180b0d5a6f40f25278f-with-play.gif">
   </a>
-
 ## Notes
 
 Describe any challenges encountered while building the app.
